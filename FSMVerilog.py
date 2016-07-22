@@ -11,7 +11,7 @@ class FSM:
         output.write("module " + self.s_moduleName + "(reset, clk, " + self.makeInputVarString() + ");\n")
         output.write("\tinput reset, clk, " + self.makeInputVarString() + ";\n")
         output.write("\tparameter " + self.makeStateString() + ";\n")
-        output.write("\treg[1:0] state, nextState;\n\n")
+        output.write("\treg[16:0] state, nextState;\n\n")
 
     # print the initialize part of verilog file
     def printInitialize(self, output):
